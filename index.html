@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculus Visualizer</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Visualize Derivatives and Integrals in Real Time!</h1>
+      <div class="row">
+        <div>
+          <h2>
+            Developed by
+            <a href="https://github.com/MatthewGreenspun" target="_blank"
+              >Matthew Greenspun</a
+            >
+          </h2>
+          <h2>(<span data-x="0"></span>, <span data-y="0"></span>)</h2>
+        </div>
+        <div>
+          <h2>Current Derivative: <span data-derivative="0"></span></h2>
+          <h2>AUC: <span data-auc="0"></span></h2>
+        </div>
+      </div>
+      <canvas id="canvas" width="1400" height="700"></canvas>
+      <div class="controls">
+        <label for="derivative">Show Derivative</label>
+        <input
+          type="checkbox"
+          name="derivative"
+          id="derivative"
+          checked="false"
+          data-checkbox="derivative"
+        />
+        <label for="integral">Show Integral</label>
+        <input
+          type="checkbox"
+          name="integral"
+          id="integral"
+          checked="true"
+          data-checkbox="integral"
+        />
+      </div>
+      <button id="clear-btn" data-btn="clear">Clear</button>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
